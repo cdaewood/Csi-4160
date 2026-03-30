@@ -17,7 +17,8 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd Csi-4160
+           cd Csi-4160
             git pull origin main
-            pkill -f "python3 main.py" || true
+           pip3 install -r requirements.txt
+             pkill -f "python3 main.py" || true
             nohup python3 main.py > output.log 2>&1 &
