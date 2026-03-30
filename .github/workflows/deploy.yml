@@ -20,5 +20,5 @@ jobs:
            cd Csi-4160
             git pull origin main
            pip3 install -r requirements.txt
-             pkill -f "python3 main.py" || true
+             pkill -f main.py || true
             nohup python3 main.py > output.log 2>&1 &
