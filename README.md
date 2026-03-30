@@ -18,3 +18,24 @@ Webhook → HTTP Request → Respond to Webhook
 4. Send POST request:
 
 
+# Automated Deployment (CI/CD + IaC)
+
+## Overview
+This project demonstrates automated deployment of a FastAPI application using AWS EC2, GitHub Actions, and Terraform.
+
+## CI/CD Pipeline
+- Triggered on push to main branch
+- Uses GitHub Actions
+- Connects to EC2 via SSH
+- Pulls latest code
+- Restarts application automatically
+
+## Infrastructure as Code
+- Terraform defines EC2 and security group
+
+## Deployment
+- Application runs on EC2
+- Updates automatically when code changes
+
+## Endpoint
+http://3.139.100.83:8000/health
